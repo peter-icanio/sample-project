@@ -5,8 +5,9 @@ pipeline {
     stage('Build') {
       steps {
         // Perform build steps (e.g., installing dependencies) for your Python application
-        sh 'docker images'
         sh 'ls'
+        sh 'docker buils . -t python-web'
+        sh 'docker images'
       }
     }
     
