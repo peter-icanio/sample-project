@@ -14,7 +14,7 @@ pipeline {
     stage('Deploy') {
       steps {
         // Perform deployment steps for your Python application
-        sh 'python3 app.py'
+        sh 'docker run -itd -p "1234:1234" python-web:latest '
       }
     }
   }
