@@ -13,8 +13,8 @@ pipeline {
     stage('Deploy') {
       steps {
         // Perform deployment steps for your Python application
-        sh 'pm2 delete python-api'
-        sh 'pm2 start "python3 app.py" --name python-api'
+        //sh 'pm2 delete python-api'
+        sh 'pm2 start python3 app.py'
       }
     }
   }
