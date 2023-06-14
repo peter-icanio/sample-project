@@ -6,7 +6,7 @@ pipeline {
       steps {
         // Perform build steps (e.g., installing dependencies) for your Python application
         sh 'ls'
-        sh 'pip install Flask
+        sh 'pip install Flask'
       }
     }
     
