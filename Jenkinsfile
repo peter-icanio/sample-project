@@ -6,9 +6,8 @@ pipeline {
       steps {
         // Perform build steps (e.g., installing dependencies) for your Python application
         sh 'ls'
-        sh 'pip install Flask'
-        
-      }docker run -itd -p "1234:1234" python-web:latest  
+        sh 'pip install Flask
+      }
     }
     
     stage('Deploy') {
