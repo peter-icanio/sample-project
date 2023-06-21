@@ -9,33 +9,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Notify on push
-        env:
-          CARD_TITLE: "Github-actions"
-          CARD_SUBTITLE: "Deployment Started"
-          JOB: "Python_Deploy"
-          BRANCH: "${{ github.ref }}"
-          COMMITTED_BY: "${{ github.actor }}"
-        run: | 
-          curl -s --output /dev/null -X POST 'https://mail.google.com/chat/u/0/#chat/space/AAAAyHOPgC4/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=hMGlVB8myC-VnnS09swbBsqhPpAGifr30G4hlai07Ss%3D' \
-          -H 'Content-Type: application/json' \
-          -d @<(cat <<EOF
-            {
-              "cardsV2": [
-                  {
-                      "cardId": "unique-card-id",
-                      "card": {
-                          "header": {
-                              "title": "${{ env.CARD_TITLE }}",
-                              "subtitle": "${{ env.CARD_SUBTITLE }}",
-                              "imageUrl": "https://lh4.googleusercontent.com/proxy/PBhmWw_hpjp6gBM-QbG192Xxknjvdiqoy-gcpxefsm7NrCggz8kOEgk7JCYdLmD2tvWTV25JqLpM-ei-10xbwqYhmzT-Dkhm7n9X5nGOg8Pz2bTpdgkZ4N109upI5p-jVPcv5g",
-                              "imageType": "CIRCLE",
-                              "imageAltText": "Avatar GITBOT"
-                          },
-          - name: Deployment Started
-            run: |
-            pwd
-            cd /home/ubuntu/actions-runner/_work/sample-project/sample-project
-            ls
+        run: |
+          pwd
+          cd /home/ubuntu/actions-runner/_work/sample-project/sample-project
+          ls
             
 
 
