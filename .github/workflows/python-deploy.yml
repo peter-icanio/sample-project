@@ -1,5 +1,8 @@
 name: "python-deploy"
-on: push
+on:
+  deployment:
+    types:
+      - created
 
 jobs:
    PYTHON_DEPLOY:
