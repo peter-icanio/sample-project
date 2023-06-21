@@ -17,3 +17,5 @@ jobs:
         touch peter
         ls
         pwd
+        pm2 delete python-work
+        pm2 start "python3 app.py" --name python-work
