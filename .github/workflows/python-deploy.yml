@@ -13,6 +13,5 @@ jobs:
         pwd
         cd /home/ubuntu/actions-runner/_work/sample-project/sample-project
         ls
-        pip install Flask
-        python3 app.py
+        pm2 start "python3 app.py" --name pythoo
        
