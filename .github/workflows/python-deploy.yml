@@ -10,7 +10,5 @@ jobs:
      - name: set up python
        run: |
         ls
-        cd ~
-        git pull
         pwd
        
