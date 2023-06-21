@@ -2,18 +2,10 @@ name: "python-deploy"
 on: push
 
 jobs:
-   PYTHON_DEPLOY:
-   name: Ready to run
-   steps:
-       - name: Checkout code
-         uses: actions/checkout@v2
-         
-         -name: Start python
-         run: |
-             cd /home/icanio-10093/project/sample-project
-             git pull
-             pm2 start "python3 app.py" --name python
-             echo "Completed......"
-             env:
-                 CARD_TITTLE: "github-action"
-                 
+  build:
+     runs-on: self-hosted
+     
+     steps:
+     - uses: actions/checkout@v3
+     - name: set up python
+       run: ls
