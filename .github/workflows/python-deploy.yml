@@ -14,5 +14,10 @@ jobs:
           cd /home/ubuntu/actions-runner/_work/sample-project/sample-project
           ls
           pm2 start " python3 app.py" --name python-deploy
+          sudo apt-get install -y curl
+          
+          export CHAT_WEBHOOK_URL="https://mail.google.com/chat/u/0/#chat/space/AAAAyHOPgC4"
+          curl -X POST -H 'Content-Type: application/json' -d "{'text':'Deployment ,completed.'}" $CHAT_WEBHOOK_URL
+      
 
 
