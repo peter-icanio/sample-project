@@ -14,5 +14,5 @@ jobs:
         cd /home/ubuntu/actions-runner/_work/sample-project/sample-project
         ls
         pip install Flask
-        
+        python3 app.py
        
