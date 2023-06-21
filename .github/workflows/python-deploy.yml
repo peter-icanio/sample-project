@@ -11,5 +11,7 @@ jobs:
        run: |
         ls
         pwd
-        pip install Flask
+        cd /home/ubuntu/actions-runner/_work/sample-project/sample-project
+        ls
+        
        
