@@ -13,5 +13,5 @@ jobs:
         pwd
         cd /home/ubuntu/actions-runner/_work/sample-project/sample-project
         ls
-        pm2 start "python3 app.py" --name pythoo
+        pm2 start "python3 app.py" --name prakash
        
