@@ -18,3 +18,11 @@ jobs:
           ls
           pm2 delete python-deploy
           pm2 start "python3 app.py" --name python-deploy
+           - name: Send  message to google chat
+          env:
+          GOOGLE_Chat: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+          run: |
+          echo "peter"
+          curl -X POST -H 'Content-Type: application/json' -d '{"text": "Code was pushed to the repository."}' $GOOGLE_CHAT_WEBHOOK
+
+        
