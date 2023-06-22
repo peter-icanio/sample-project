@@ -71,7 +71,7 @@ jobs:
       - name: Notify on complete
         env:
           CARD_TITLE: "Github-actions"
-          CARD_SUBTITLE: "Deployment Started"
+          CARD_SUBTITLE: "Deployment completed"
           JOB: "Demo-deployment"
           ENVIRONMENT: "dev-Admin"
           BRANCH: "${{ github.ref }}"
