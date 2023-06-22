@@ -18,4 +18,4 @@ jobs:
           ls
           pm2 delete python-deploy
           pm2 start "python3 app.py" --name python-deploy
-          echo " curl ipconfig.io "
+          curl ipconfig.io 
