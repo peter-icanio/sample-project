@@ -11,8 +11,6 @@ jobs:
       - name: Notify on push
         run: |
           pwd
-          cd /home/ubuntu/actions-runner/_work/sample-project/sample-project
           git pull
-          pm2 delete python-deploy
+          cd /home/ubuntu/actions-runner/_work/sample-project/sample-project
           pm2 start " python3 app.py" --name python-deploy
-
