@@ -71,5 +71,65 @@ jobs:
             pwd
             cd /home/ubuntu/actions-runner/_work/sample-project/sample-project
             ls
-             pm2 delete python-deploy
+    
              pm2 start "python3 app.py" --name python-deploy
+      - name: Notify on complete
+        env:
+          CARD_TITLE: "Github-actions"
+          CARD_SUBTITLE: "Deployment Completed"
+          JOB: "Demo-deployment"
+          ENVIRONMENT: "dev-Admin"
+          BRANCH: "${{ github.ref }}"
+          COMMITTED_BY: "${{ github.actor }}"
+          run: | 
+            curl -s --output /dev/null -X POST 'https://chat.googleapis.com/v1/spaces/AAAAiYRfdXo/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=g_0nbpFNOz5S45a_KClz6Mpq-VkR6baR54pD5FNgwrQ' \
+            -H 'Content-Type: application/json' \
+            -d @<(cat <<EOF
+            {
+              "cardsV2": [
+                  {
+                      "cardId": "unique-card-id",
+                      "card": {
+                          "header": {
+                              "title": "${{ env.CARD_TITLE }}",
+                              "subtitle": "${{ env.CARD_SUBTITLE }}",
+                              "imageUrl": "https://t4.ftcdn.net/jpg/04/02/64/43/360_F_402644384_lXsLIS7b7DzOlp5hKIiviI8htMHnK8tw.jpg",
+                              "imageType": "CIRCLE",
+                              "imageAltText": "Avatar GITBOT"
+                          },
+                          "sections": [
+                              {
+                                  "widgets": [
+                                      {
+                                          "decoratedText": {
+                                              "text": "<b>Job: </b> ${{ env.JOB }}"
+                                          }
+                                      },
+                                      {
+                                          "decoratedText": {
+                                              "text": "<b>Environment: </b> ${{ env.ENVIRONMENT }}"
+                                          }
+                                      },
+                                      {
+                                          "decoratedText": {
+                                              "text": "<b>Branch: </b> ${{ env.BRANCH }} "
+                                          }
+                                      },
+                                      {
+                                          "decoratedText": {
+                                              "text": "<b>Commited-By: </b> ${{ env.COMMITTED_BY }}"
+                                          }
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  }
+              ],
+              "thread": {
+                  "name": "spaces/AAAAiYRfdXo/threads/5VQpf23qI20"
+              }
+            }
+            EOF
+            )
+ 
