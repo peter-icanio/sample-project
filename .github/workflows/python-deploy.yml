@@ -27,7 +27,7 @@ jobs:
                           "header": {
                               "title": "${{ env.CARD_TITLE }}",
                               "subtitle": "${{ env.CARD_SUBTITLE }}",
-                              "imageUrl": "https://lh4.googleusercontent.com/proxy/PBhmWw_hpjp6gBM-QbG192Xxknjvdiqoy-gcpxefsm7NrCggz8kOEgk7JCYdLmD2tvWTV25JqLpM-ei-10xbwqYhmzT-Dkhm7n9X5nGOg8Pz2bTpdgkZ4N109upI5p-jVPcv5g",
+                              "imageUrl": "https://t4.ftcdn.net/jpg/04/02/64/43/360_F_402644384_lXsLIS7b7DzOlp5hKIiviI8htMHnK8tw.jpg",
                               "imageType": "CIRCLE",
                               "imageAltText": "Avatar GITBOT"
                           },
