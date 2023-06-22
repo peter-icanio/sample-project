@@ -1,5 +1,8 @@
 name: "python-deploy"
-on: push
+on: 
+  push:
+    branches:
+       - main
 
 jobs:
    PYTHON_DEPLOY:
