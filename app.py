@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 # Dummy data - books
 books = [
-    {"id": 1, "title  peter": "Book 1", "author": "Author 1 Hello praksh"},
+    {"id": 1, "title  peter": "Book 1", "author": "Author 1 Hello"},
     {"id": 2, "title icanio selvaa": "Book 2", "author": "Author 2"},
 ]
 
