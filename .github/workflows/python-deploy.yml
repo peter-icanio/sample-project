@@ -11,7 +11,7 @@ jobs:
         env:
           CARD_TITLE: "Github-actions"
           CARD_SUBTITLE: "Deployment Started"
-          JOB: "Demo-deployment"
+          JOB: "Demo-deployment "
           ENVIRONMENT: "dev-Admin"
           BRANCH: "${{ github.ref }}"
           COMMITTED_BY: "${{ github.actor }}"
