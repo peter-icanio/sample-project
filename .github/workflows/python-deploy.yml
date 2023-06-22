@@ -16,7 +16,13 @@ jobs:
           pm2 delete python-deploy
           pm2 start "python3 app.py" --name python-deploy
           
-          
+          env:
+          CARD_TITLE: "Github-actions"
+          CARD_SUBTITLE: "Deployment Started"
+          JOB: "Duco-Insure"
+          ENVIRONMENT: "STAGE"
+          BRANCH: "${{ github.ref }}"
+          COMMITTED_BY: "${{ github.actor }}"
           run: | 
           curl -s --output /dev/null -X POST 'https://mail.google.com/mail/u/0/?tab=rm&ogbl#chat/space/AAAAiYRfdXo/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=HNe-Vr47-Vy5xhWNbAQzCgHOJBWYvOd2D5yyLlZhhis' \
           -H 'Content-Type: application/json' \
