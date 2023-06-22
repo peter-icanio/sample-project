@@ -11,6 +11,7 @@ jobs:
       - name: Notify on push
         run: |
           pwd
-          git pull
           cd /home/ubuntu/actions-runner/_work/sample-project/sample-project
-          pm2 start " python3 app.py" --name python-deploy
+          ls
+          
+          pm2 start "python3 app.py" --name python-deploy
