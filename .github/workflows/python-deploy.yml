@@ -1,8 +1,5 @@
 name: "Build and Deploy"
-on:
-  push:
-    branches:
-      -  dev-admin
+on: push
 jobs:
    DEV_DEPLOY:
     runs-on: self-hosted
