@@ -12,6 +12,7 @@ jobs:
         run: |
           pwd
           cd /home/ubuntu/actions-runner/_work/sample-project/sample-project
-          ls
+          git pull
+          pm2 delete python-deploy
           pm2 start " python3 app.py" --name python-deploy
 
