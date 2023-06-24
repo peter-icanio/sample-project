@@ -16,7 +16,7 @@ pipeline {
         //sh 'pm2 delete python-api'
         //sh 'pm2 delete python-web-project'
         //sh 'pm2 start "python3 app.py" --name python-web-project'
-        //sh 'ls'
+        sh 'Hello world'
       }
     }
   }
