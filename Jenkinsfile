@@ -5,7 +5,7 @@ pipeline {
     stage('scan') {
       steps {
         // Perform build steps (e.g., installing dependencies) for your Python application
-        sh 'Hello World'
+        sh 'echo Hello World'
         // sh 'pip install Flask'
       }
     }
