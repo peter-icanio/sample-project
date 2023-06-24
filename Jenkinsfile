@@ -9,5 +9,10 @@ pipeline {
         // sh 'pip install Flask'
       }
     }
+    stage('build') {
+      steps{
+        sh 'echo okk '
+      }
+    }
   }
 }
