@@ -16,4 +16,3 @@ jobs:
          echo "${{ vars.NOTIFICATION }}" > comand.sh 
          ls
          cat comand.sh
-         bash comand.sh
