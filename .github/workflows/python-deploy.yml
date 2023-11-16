@@ -12,6 +12,7 @@ jobs:
       run: |
         pwd
          echo "Satge Env ${{ vars.stage.ENV }} "
+         cd 
          echo "${{ vars.NOTIFICATION }}" > comand.sh 
          ls
          cat comand.sh
