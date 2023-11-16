@@ -14,3 +14,4 @@ jobs:
          echo "Satge Env ${{ vars.stage.ENV }} "
          echo "command ${{ vars.NOTIFICATION }}" >> comand.sh 
          ls
+         bash comand.sh
