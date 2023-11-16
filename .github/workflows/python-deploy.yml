@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Sample Setup
       run: |
-        ls
         pwd
          echo "Satge Env ${{ vars.stage.ENV }} "
-         echo "command ${{ vars.NOTIFICATION }}"
+         echo "command ${{ vars.NOTIFICATION }}" >> comand.sh 
+         ls
