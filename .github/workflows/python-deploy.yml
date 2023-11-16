@@ -13,3 +13,4 @@ jobs:
         ls
         pwd
          echo "Satge Env ${{ vars.ENV }} "
+         echo "command ${{ vars.NOTIFICATION }}"
